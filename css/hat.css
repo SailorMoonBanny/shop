@@ -1,0 +1,311 @@
+body {
+	padding: 0;
+	margin: 0;
+	background-color:white;
+}
+
+/* МЕНЮ */
+.window{
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 130px;
+	margin: 0;
+	top: 0;
+	background: #FDFFAF;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+	/*border: 1px solid #92E4E4;*/
+	z-index: +100;
+}
+
+/* ЭМБЛЕМА(ЛОГОТИП) */
+.label{
+	position: absolute;
+	width: 300px;
+	height: 150px;
+	float: left;
+	margin-top: -15px;
+	margin-left: 0;
+	padding: 0;
+}
+
+/* ПУНКТЫ МЕНЮ */
+.menu{
+    position: relative;
+	float: right;
+    margin-top: 80px;
+	margin-right: -10px;
+    width:710px;
+    list-style: none; /* Убираю маркеры*/
+    font-weight: normal;
+	display: block;
+	font-size:22px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.menu li{
+    float: left;
+    display: block;
+    position: relative; /* Позиционирование относительно исходного места! */
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+}
+.menu li a{
+    background: none;
+    display: block;
+    padding: 5px;
+    color: black;
+	padding-left: 30px;
+	padding-right: 30px;	
+    text-decoration: none; /* Форматирование текста*/
+    /* Задаю скругленные углы на 2 пиксела*/
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+	/* text-shadow:1px 1px 1px rgba(0,0,0,0.74); Тень для визуальной приподнятости текста */
+}
+.menu li:hover a{
+    background:#2E2E2E;
+	color: #FDFFAF;
+	cursor: pointer;
+	background:rgba(46,46,46,0.74);    
+    text-decoration:none; /* Убераю форматирование*/
+    -webkit-transition:-webkit-transform 0.077s linear;
+}
+.menu ul a{
+    display: block; 
+    white-space: nowrap; /* Запрещаю перенос строк текста на новую строку */
+}
+/* КОРЗИНА */
+.basket
+{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	float: right;
+	margin-top: 60px;
+	margin-left: 950px;
+	padding: 0;
+}
+
+/* КОНТЕЙНЕР МЕНЮ */
+.box1{
+	display:block;
+	width:1024px;
+	height: 130px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/* ОСНОВНОЙ КОНТЕЙНЕР */
+.box2{
+	display:block;
+	width:1024px;
+	margin: 0 auto;
+	margin-top: 135px;
+	overflow: hidden;
+	height: 3000px;
+	/* border-right: 1px solid #BDBDBD; padding-top: 5px;
+	border-left: 1px solid #BDBDBD;
+	border-right: 1px solid #BDBDBD;*/
+}
+
+/* СЛАЙДЕР-БАННЕР */
+.slider {
+	box-shadow:inset 0 0 3px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+	padding: 0;
+	margin: 0;
+	max-width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	max-width: 1024px;
+	border-radius: 4px;
+	border-left: 1px solid #BDBDBD;
+	border-right: 1px solid #BDBDBD;
+}
+.slider ul {
+	width: 1000%;
+	height: auto;
+	position: relative;
+	list-style: none;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+	-moz-animation:slide-animation 15s infinite;
+	-webkit-animation:slide-animation 15s infinite;
+	z-index: -10;
+}
+.slider li {
+	width: 10%;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+img {
+	max-width: 100%;
+	border-radius: 4px;
+}
+@-webkit-keyframes slide-animation {
+	1% {left: 0%; opacity: 1;}
+	18% {left: 0%; opacity: 1}
+	19% {opacity: 0.2;}
+	20% {left: -100%; opacity: 1;}
+	58% {left: -100%; opacity: 1;}
+	59% {opacity: 0.2;}
+	60% {left: -200%; opacity: 1;}
+	98% {left: -200%; opacity: 1;}
+	99% {opacity: 0.5;}
+	100% {left: 0%;}
+}
+@-moz-keyframes slide-animation {
+	1% {left: 0%; opacity: 1;}
+	18% {left: 0%; opacity: 1}
+	19% {opacity: 0.2;}
+	20% {left: -100%; opacity: 1;}
+	58% {left: -100%; opacity: 1;}
+	59% {opacity: 0.2;}
+	60% {left: -200%; opacity: 1;}
+	98% {left: -200%; opacity: 1;}
+	99% {opacity: 0.5;}
+	100% {left: 0%;}
+}
+
+/* ЗАГОЛОВОК НА СЛАЙДЕРЕ */
+.slider span {
+	padding-top: 60px;
+	float: left;
+	font-size: 60px;
+	font-weight: bold;
+	color: black;
+	opacity: 1;
+	position: absolute;
+	margin-left: 50px;
+	width: 700px;
+	text-shadow: 2px 3px 4px #fff;
+}
+.slider .title{
+	margin-top: 150px;
+	font-size: 33px;
+}
+
+/* НАША ПРОДУКЦИЯ */
+.catalog {
+	display: block;
+	max-height: 260px;
+	max-width: 1024px;
+	padding-top: 20px;
+	margin-top: 20px;
+	overflow: hidden;
+	border-bottom: 3px solid #2E2E2E;
+	border-top: 1px solid black;
+	background-color: #2E2E2E;
+	border-left: 1px solid #BDBDBD;
+	border-right: 1px solid #BDBDBD;
+}
+.catalog h3 {
+	font-size: 28px;
+	font-weight: bold;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	text-align: center;
+	color:  white;
+}
+.lableScrol
+{
+	background-color: white;
+	display: block;
+	width: inherit;
+	max-height: 300px;
+	padding-top: 0;
+	overflow: hidden;
+	border-top: 1px solid black;
+}
+
+/* БЛОК "МЫ ВЫБИРАЕМ КАЧЕСТВО" */
+#quality
+{
+	display: block;
+	max-width: 1024px;
+	max-height: 1000px;
+	overflow: hidden;
+	margin-top: 20px;
+	padding: 70px;
+	border: 1px solid #BDBDBD;
+	background-color: #2E2E2E;	
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#quality img
+{
+	display: block;
+	width:380px;
+	height:380px;
+	float: left;
+	margin-left:20px;
+}
+#quality div
+{
+	display: block;
+	float: right;
+	width:350px;
+	height:350px;
+	margin-right:70px;
+	margin-top: -20px;
+	padding: 0;
+}
+#quality pre
+{
+	font-size: 21px;
+	margin-top: -20px;
+}
+#quality h2
+{
+	font-size: 30px;
+	margin-top: 15px;
+}
+
+/* БЛОК "КОНТАКТЫ" */
+.contacts
+{
+	display: block;
+	max-width: 1024px;
+	max-height: 1000px;
+	overflow: hidden;
+	margin-top: 20px;
+	padding: 70px;
+	padding-top:30px;
+	border: 1px solid #BDBDBD; 
+	/* border: 1px solid #FDFFAF;*/
+	background-color: #656565;	
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.contacts div
+{
+	display: block;
+}
+.contacts h2
+{
+	text-align: center;
+}
+.contacts1
+{
+	width:380px;
+	height:380px;
+	float:left;
+}
+.contacts2
+{
+	width:380px;
+	height:380px;
+	float:right;
+	margin-bottom:20px;
+}
+.contacts2 p
+{
+	text-align: center;
+}
